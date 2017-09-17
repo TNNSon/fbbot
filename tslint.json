@@ -1,0 +1,252 @@
+{
+  "rules": {
+    // enforces vertical alignment
+    "class-name": true,
+
+    // enforces PascalCased class and interface names
+    // eg. ClassName
+    "align": [
+      true,
+      "statements",
+      "require"
+    ],
+
+    // Use a space after "//"
+    // bad: "//comment"
+    // good: "// comment"
+    "comment-format": [
+      true,
+      "check-space"
+    ],
+
+    // enforces braces for if/for/do/while statements
+    "curly": true,
+
+    // enforces the file to end with a newline
+    "eofline": true,
+
+    // enforces a "for ... in" statement to be filtered with an if statement
+    // explanation: https://jslinterrors.com/the-body-of-a-for-in-should-be-wrapped-in-an-if-statement
+    "forin": true,
+
+    // enforces indentation with spaces
+    "indent": [
+      true,
+      "spaces"
+    ],
+
+    // enforces consistent interface names
+    // eg. interface IPerson {}
+    "interface-name": [
+      true,
+      "always-prefix"
+    ],
+
+    // enforces basic format rules for jsdoc comments — comments starting with "/**"
+    "jsdoc-format": true,
+
+    // Only allows labels to be on "do/for/while/switch" statements
+    "label-position": true,
+
+    // sets the maximum length of a line to 140 chars
+    "max-line-length": 140,
+
+    // enforces member ordering within a class
+    "member-ordering": [
+      true,
+      {
+        "order": [
+          "public-static-field",
+          "protected-static-field",
+          "private-static-field",
+          "public-instance-field",
+          "protected-instance-field",
+          "private-instance-field",
+          "constructor",
+          "public-static-method",
+          "protected-static-method",
+          "private-static-method",
+          "public-instance-method",
+          "protected-instance-method",
+          "private-instance-method"
+
+        ]
+      }
+    ],
+
+    // allow usage of any as a type decoration
+    // eg. let some_variable: any = 4;
+    "no-any": false,
+
+    // disallow access to arguments.callee
+    "no-arg": true,
+
+    // disallow any type of assignment in any conditionals
+    // eg. if (var1 = var2) {}
+    "no-conditional-assignment": true,
+
+    // allow having more than one blank line in a row in a file
+    "no-consecutive-blank-lines": false,
+
+    // disallow access to the specified functions on "console"
+    "no-console": [
+      true,
+      "debug",
+      "info",
+      "time",
+      "timeEnd",
+      "trace"
+    ],
+
+    // disallow access to the constructors of "String", "Number", and "Boolean"
+    "no-construct": true,
+
+    // disallow the "public" and "private" modifiers for constructor parameters
+    "no-constructor-vars": false,
+
+    // disallow debugger statements
+    "no-debugger": true,
+
+    // disallow duplicate keys in object literals
+    "no-duplicate-key": true,
+
+    // disallow duplicate variable declarations in the same block scope
+    "no-duplicate-variable": true,
+
+    // allow empty blocks
+    "no-empty": false,
+
+    // disallow eval function invocations
+    "no-eval": true,
+
+    // disallow explicit type declarations for variables or parameters initialized to a number, string, or boolean
+    // eg. let someVar: number = 23;
+    "no-inferrable-types": true,
+
+    // disallow internal "module" (use "namespace" instead)
+    "no-internal-module": true,
+
+    // allow use of the null keyword literal
+    "no-null-keyword": false,
+
+    // disallow invocation of require() (use ES6-style imports instead)
+    "no-require-imports": true,
+
+    // allow shadowed variable declarations
+    "no-shadowed-variable": false,
+
+    // disallow object access via string literals
+    "no-string-literal": true,
+
+    // disallow falling through case statements
+    "no-switch-case-fall-through": true,
+
+    // disallow trailing whitespace at the end of a line
+    "no-trailing-whitespace": true,
+
+    // disallow unreachable code after "break", "catch", "throw", and "return" statements
+    "no-unreachable": true,
+
+    // disallow unused expression
+    "no-unused-expression": true,
+
+    // disallow unused imports, variables, functions and private class members
+    "no-unused-variable": true,
+
+    // disallow usage of variables before their declaration
+    "no-use-before-declare": true,
+
+    // disallow usage of the var keyword, use "let" or "const" instead
+    "no-var-keyword": true,
+
+    // disallow the use of require statements except in import statements,
+    // banning the use of forms such as var module = require("module")
+    "no-var-requires": true,
+
+    // checks that keys in object literals are declared in alphabetical order,
+    // this is useful to prevent merge conflicts
+    "object-literal-sort-keys": true,
+
+    // enforces the specified tokens to be on the same line as the expression preceding it
+    "one-line": [
+      true,
+      "check-open-brace",
+      "check-catch",
+      "check-else",
+      "check-whitespace"
+    ],
+
+    // enforces consistent double quoted string literals
+    "quotemark": [
+      true,
+      "double"
+    ],
+
+    // enforces the radix parameter of "parseInt"
+    "radix": true,
+
+    // enforces consistent semicolon usage at the end of every statement
+    "semicolon": true,
+
+    // enforces a "default" case in "switch" statements
+    "switch-default": true,
+
+    // enforces or disallows trailing comma within array and object literals,
+    // destructuring assignment and named imports
+    "trailing-comma": [
+      true,
+      {
+        "multiline": "never",
+        "singleline": "never"
+      }
+    ],
+
+    // enforces "===" and "!==" in favor of "==" and "!="
+    "triple-equals": [
+      true,
+      "allow-null-check",
+      "allow-undefined-check"
+    ],
+
+
+    // enforces type definitions to exist
+    "typedef": [
+      true,
+      "call-signature",
+      "arrow-call-signature",
+      "parameter",
+      "arrow-parameter",
+      "property-declaration",
+      "variable-declaration",
+      "member-variable-declaration"
+    ],
+
+    // enforces spacing whitespace for type definitions
+    // eg. let someVar:string = 'This is a string'
+    "typedef-whitespace": [
+      true,
+      {
+        "call-signature": "nospace",
+        "index-signature": "nospace",
+        "parameter": "nospace",
+        "property-declaration": "nospace",
+        "variable-declaration": "nospace"
+      }
+    ],
+
+    // don't enforce ECMAScript 5's strict mode
+    "use-strict": false,
+
+    // don't check variable names for various errors
+    "variable-name": false,
+
+    // enforces whitespaces
+    "whitespace": [
+      true,
+      "check-branch", // checks branching statements (if/else/for/while) are followed by whitespace
+      "check-decl", // checks that variable declarations have whitespace around the equals token
+      "check-operator", // checks for whitespace around operator tokens
+      "check-separator" // checks for whitespace after separator tokens (,/;)
+    ]
+  }
+}
