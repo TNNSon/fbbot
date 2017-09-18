@@ -1,4 +1,4 @@
-interface IRepositoryBase {
+export interface IRepositoryBase {
     retrieve(filter: any): any;
 
     create(item: any): any;

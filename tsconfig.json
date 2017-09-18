@@ -1,20 +1,25 @@
 {
-    "compilerOptions": {
-        "target": "es5",
-        "module": "commonjs",
-        "moduleResolution": "node",
-        "experimentalDecorators": true,
-        "removeComments": false,
-		"types": ["reflect-metadata"],
-        "emitDecoratorMetadata": true,
-        "noImplicitAny": true,
-        "noImplicitThis": true
-
-    },
-    "exclude": [
-      "node_modules"
+  "compilerOptions": {
+    "outDir": "public",
+    "rootDir": "src",
+    "target": "es5",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "removeComments": false,
+    "types": [
+      "reflect-metadata"
     ],
-	"include": [
-		"src/*"
-	]
+    "emitDecoratorMetadata": true,
+    "noImplicitAny": false,
+    "noImplicitThis": true,
+    "experimentalDecorators": true,
+    "sourceMap": true
+  },
+  "exclude": [
+    "node_modules",
+    ".idea"
+  ],
+  "include": [
+    "src/*"
+  ]
 }

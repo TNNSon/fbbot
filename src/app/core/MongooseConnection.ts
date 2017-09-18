@@ -16,18 +16,17 @@ export class MongooseConnection {
         let retryTimes = MAX_RETRY_TIMES;
 
         function connectWithRetry() {
-
             let connectionString = "mongodb://".concat(process.env.DB_CONNECTION || "localhost:27017")
-                .concat("/").concat(process.env.DB_NAME || "facebookBot");
+                .concat("/").concat(process.env.DB_NAME || "facebook");
 
-            return mongoose.connect(connectionString, {config: {autoIndex: false}}, (err) => {
+            return mongoose.connect(connectionString, {config: {autoIndex: false}, useMongoClient: true},(err: any) => {
                 if (err) {
                     if (!MongooseConnection.isSigint && err.message && err.message.match(/failed to connect to server .* on first connect/) && retryTimes !== 0) {
                         setTimeout(connectWithRetry, RECONNECT_INTERVAL);
                         retryTimes--;
                     }
                 }
-            });
+            })
         };
 
         connectWithRetry();

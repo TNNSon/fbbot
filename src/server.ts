@@ -9,9 +9,9 @@ try {
 }
 
 try {
-    MongooseConnection.connect();
+    MongooseConnection.connect;
 
-    console.log("Start Server" + process.env.DB);
+    console.log("Start Server" + process.env.DB_NAME);
     var app = express();
 
     var port = parseInt(process.env.PORT, 10) || 30001;

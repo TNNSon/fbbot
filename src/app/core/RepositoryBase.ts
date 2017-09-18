@@ -1,4 +1,5 @@
 import mongoose = require("mongoose");
+import {IRepositoryBase} from "./IRepositoryBase";
 var Q = require("q");
 
 export class RepositoryBase<T> implements IRepositoryBase{
