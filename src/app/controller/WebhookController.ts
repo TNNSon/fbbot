@@ -9,16 +9,16 @@ export class WebhookController implements IWebhookController {
     }
 
     public get(req: any, res: any): any {
-        if (req.query["hub.verify_token"] === "123456789") {
+        if (req.query["hub.verify_token"] === process.env.APP_FACEBOOK_TOKEN) {
             res.send(req.query["hub.challenge"]);
         }
         res.send("Error, wrong validation token");
     }
 
-    public processMessage(req: any, res: any): any{
+    public processMessage(req: any, res: any): any {
         return this._webhookService.processMessage(req.body)
-            .then((rs) => {
-                return res.status(200).json({status: "ok"})
+            .then((rs: any) => {
+                return res.status(200).json({status: "ok"});
             });
     }
 }

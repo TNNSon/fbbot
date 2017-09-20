@@ -10,6 +10,8 @@ import {IWebhookService} from "../../service/IWebhookService";
 import {WebhookService} from "../../service/WebhookService";
 import {IWitAI} from "../../core/IWitAI";
 import {WitAI} from "../../core/WitAI";
+import {IFacebookService} from "../../core/IFacebookService";
+import {FacebookService} from "../../core/FacebookService";
 
 class IocConfig {
     static init(): Container {
@@ -21,6 +23,7 @@ class IocConfig {
         kernel.bind<IRepositoryBase>("IRepositoryBase").to(RepositoryBase);
         kernel.bind<IWebhookService>("IWebhookService").to(WebhookService);
         kernel.bind<IWitAI>("IWitAI").to(WitAI);
+        kernel.bind<IFacebookService>("IFacebookService").to(FacebookService);
 
         return kernel;
     }

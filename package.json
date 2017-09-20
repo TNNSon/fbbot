@@ -45,6 +45,7 @@
     "mongoose": "4.11.11",
     "node-wit": "4.3.0",
     "q": "1.5.0",
-    "reflect-metadata": "0.1.10"
+    "reflect-metadata": "0.1.10",
+    "request": "^2.82.0"
   }
 }

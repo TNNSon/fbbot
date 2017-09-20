@@ -1,3 +1,3 @@
-export interface IWebhookService{
+export interface IWebhookService {
     processMessage(data: any): any;
 }
