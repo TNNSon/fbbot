@@ -17,7 +17,7 @@ export class MongooseConnection {
 
         function connectWithRetry(): any {
             let connectionString: string = "mongodb://".concat(process.env.DB_CONNECTION || "localhost:27017")
-                .concat("/").concat(process.env.DB_NAME || "facebook");
+                .concat("/").concat(process.env.DB_NAME || "test");
 
             return mongoose.connect(connectionString, {config: {autoIndex: false}, useMongoClient: true}, (err: any) => {
                 if (err) {
