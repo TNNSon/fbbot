@@ -16,6 +16,9 @@ export class WebhookController implements IWebhookController {
     }
 
     public processMessage(req: any, res: any): any{
-        return this._webhookService.processMessage(req.body);
+        return this._webhookService.processMessage(req.body)
+            .then((rs) => {
+                return res.status(200).json({status: "ok"})
+            });
     }
 }
